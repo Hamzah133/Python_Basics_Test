@@ -1,4 +1,4 @@
-```markdown
+
 # 🧮 Basic Functions Programming Challenge
 
 ## 📋 Overview
@@ -39,7 +39,7 @@ Return the sum of two numbers.
 add(1, 1) ➜ 2
 ```
 
----
+
 
 ### 2. `subtract(a, b)`
 **Description:**  
