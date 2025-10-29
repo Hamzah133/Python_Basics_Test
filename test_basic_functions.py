@@ -1,5 +1,5 @@
 import unittest
-from basic_functions import add, subtract, multiply, divide
+from basic_functions import add, subtract, multiply, divide, fizz_buzz, fibonacci, triangle
 
 class TestBasicFunctions(unittest.TestCase):
     def test_add(self):
@@ -22,3 +22,23 @@ class TestBasicFunctions(unittest.TestCase):
         self.assertEqual(divide(-6, 3), -2)
         with self.assertRaises(ValueError):
             divide(5, 0)
+
+    def test_fizz_buzz(self):
+        self.assertEqual(fizz_buzz(3), "Fizz")
+        self.assertEqual(fizz_buzz(5), "Buzz")
+        self.assertEqual(fizz_buzz(15), "FizzBuzz")
+        self.assertEqual(fizz_buzz(7), 7)
+
+    def test_fibonacci(self):
+        self.assertEqual(fibonacci(0), 0)
+        self.assertEqual(fibonacci(1), 1)
+        self.assertEqual(fibonacci(5), 5)
+        self.assertEqual(fibonacci(10), 55)
+        self.assertEqual(fibonacci(15), 610)
+
+    def test_triangle(self):
+        self.assertEqual(triangle(0), [])
+        self.assertEqual(triangle(1), ["*"])
+        self.assertEqual(triangle(2), ["*", "***"])
+        self.assertEqual(triangle(3), ["*", "***", "*****"])
+        self.assertEqual(triangle(4), ["*", "***", "*****", "*******"])
